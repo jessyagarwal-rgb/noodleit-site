@@ -94,7 +94,6 @@ th{background:var(--card)}
 .mic .blob i{position:absolute;inset:0;background:var(--navy);
   -webkit-mask:url(/img/blob.png) center/contain no-repeat;mask:url(/img/blob.png) center/contain no-repeat}
 .mic .blob img{position:relative;width:29px;height:auto}
-.mic .pencil{position:absolute;left:calc(50% + 50px);top:-8px;width:17px;height:17px}
 
 .band{padding:80px 0;border-top:1px solid var(--line)}
 .band h2{font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.12;margin:0 0 16px;max-width:20em;text-wrap:balance}
