@@ -21,7 +21,7 @@
   <a href="/" aria-label="Noodle home"><img class="logo" src="/img/logo.png" alt="noodle" width="603" height="129"></a>
   <nav>
     <a class="opt" href="#how">How it works</a>
-    <a class="opt" href="#privacy">Privacy</a>
+    <a href="/about/">About</a>
     <a href="/support/">Support</a>
   </nav>
 </header>
@@ -50,17 +50,52 @@
         <span class="dots" aria-hidden="true"><i style="background:var(--spark)"></i><i style="background:var(--ally)"></i><i style="background:var(--champion)"></i><i style="background:var(--rock)"></i><i style="background:var(--bridge)"></i></span>
       </div>
       <p class="eyebrow">For you today</p>
-      <div class="cards" aria-hidden="true">
+      <!-- Example cards (made-up people). They slowly rotate; see the script at the bottom. -->
+      <div class="viewport" aria-hidden="true">
+      <div class="cards" id="deck">
         <div class="c" style="background:var(--mint)">
+          <span class="tag">Follow up</span>
           <img src="/img/joys.png" alt="">
-          <p>Maya started her pottery class this week. Ask how the first wobbly bowl turned out.</p>
+          <p>Priya had her final interview at the design studio on Monday. Ask how it went.</p>
+          <div class="acts"><span>Text</span><span>Call</span></div>
+        </div>
+        <div class="c link" style="background:var(--sky)">
+          <span class="tag">Something to share</span>
+          <div class="who"><p>Sam has been teaching himself sourdough.</p><span class="av">S</span></div>
+          <div class="pv"><b>The beginner's guide to a happy sourdough starter</b><small>Article · 6 min read</small></div>
+          <div class="acts"><span class="send">Send to Sam</span><span class="ic" aria-label="More like this"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M7 10v11H3V10h4Zm0 0 4-8c1.7 0 2.6 1.2 2.2 2.9L12.5 9H19a2 2 0 0 1 2 2.3l-1.3 7.6A2.5 2.5 0 0 1 17.2 21H7"/></svg></span><span class="ic" aria-label="Not for them"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" style="transform:rotate(180deg)"><path d="M7 10v11H3V10h4Zm0 0 4-8c1.7 0 2.6 1.2 2.2 2.9L12.5 9H19a2 2 0 0 1 2 2.3l-1.3 7.6A2.5 2.5 0 0 1 17.2 21H7"/></svg></span></div>
+        </div>
+        <div class="c" style="background:var(--coral)">
+          <span class="tag">Hard week</span>
+          <img src="/img/balance.png" alt="">
+          <p>Dana's mom had surgery last Tuesday. A quick "thinking of you" goes a long way.</p>
           <div class="acts"><span>Text</span><span>Call</span></div>
         </div>
         <div class="c" style="background:var(--butter)">
-          <img src="/img/hello.png" alt="">
-          <p>It's been a month since you and Sam caught up.</p>
+          <span class="tag">Birthday</span>
+          <img src="/img/reach.png" alt="">
+          <p>Leo turns 40 on Saturday. He's been training for his first marathon.</p>
+          <div class="acts"><span>Text</span><span>Calendar</span></div>
+        </div>
+        <div class="c" style="background:var(--mint)">
+          <span class="tag">Introduce</span>
+          <img src="/img/friends.png" alt="">
+          <p>Maya just moved to Austin, and Jordan has lived there for years. Want to connect them?</p>
           <div class="acts"><span>Text</span><span>Email</span></div>
         </div>
+        <div class="c" style="background:var(--coral)">
+          <span class="tag">Celebrate</span>
+          <img src="/img/joys.png" alt="">
+          <p>Alex's short story was just published. Tell them you read it.</p>
+          <div class="acts"><span>Text</span><span>Email</span></div>
+        </div>
+        <div class="c" style="background:var(--butter)">
+          <span class="tag">Been a while</span>
+          <img src="/img/hello.png" alt="">
+          <p>It's been two months since you and Theo caught up. He was planning a trip to Lisbon.</p>
+          <div class="acts"><span>Text</span><span>Call</span></div>
+        </div>
+      </div>
       </div>
       <div class="mic" aria-hidden="true"><span><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span></div>
     </div>
@@ -133,11 +168,34 @@
 <div class="wrap">
   <p class="eyebrow">Questions</p>
   <h2>Good to know</h2>
+  <h3 class="faq-group">The basics</h3>
   <div class="faq">
+    <details><summary>What is Noodle, exactly?</summary><p>A small memory for the people in your life. You tell it what you learn about someone, and it keeps those details on that person's card. Each day it turns them into a few ideas for reaching out: a follow-up, a birthday, a link they'd love.</p></details>
+    <details><summary>Is this a CRM?</summary><p>No. There are no fields to fill in, pipelines or follow-up quotas. Noodle is built for friends, family and the colleagues you actually care about, and it works from the way you'd naturally talk about them.</p></details>
+    <details><summary>How much time does it take?</summary><p>A few seconds after you see someone, and a minute or two a day if you want to act on an idea. Noodle shows a handful of cards each day, not an inbox to clear.</p></details>
+    <details><summary>Does it cost anything?</summary><p>No. Noodle has no paid features or in-app purchases right now.</p></details>
+    <details><summary>Is it on iPhone and Android?</summary><p>Both. The iPhone app is coming soon to the App Store.</p></details>
     <details><summary>How do I sign in?</summary><p>Enter your email and Noodle sends you a one-time code. No password to remember.</p></details>
-    <details><summary>Does Noodle message people for me?</summary><p>No. Noodle suggests; you decide. Tapping Text, Call or Email opens your own phone app with you in control.</p></details>
-    <details><summary>What happens to my voice?</summary><p>It's turned into text on your phone when your phone supports it, otherwise by Apple's or Google's speech service. Recordings are never stored.</p></details>
-    <details><summary>How do I delete my account?</summary><p>In the app, open your profile and choose Delete account, or follow the steps on the <a href="/delete-account/">delete account page</a>.</p></details>
+  </div>
+
+  <h3 class="faq-group">Using Noodle</h3>
+  <div class="faq">
+    <details><summary>Does Noodle message people for me?</summary><p>Never. Noodle suggests; you decide. Tapping Text, Call or Email opens your own phone app with a draft you can change or ignore.</p></details>
+    <details><summary>What's a connection card?</summary><p>When someone has an interest you've mentioned (sourdough, trail running, a band), Noodle sometimes finds an article or idea they'd enjoy. You can send it to them, or tell Noodle "more like this" or "not for them" so the next one fits better.</p></details>
+    <details><summary>Will it bombard me with notifications?</summary><p>No. Noodle keeps it gentle: usually one short morning note, and you can turn notifications off anytime.</p></details>
+    <details><summary>What are Spark, Ally, Champion, Rock and Bridge?</summary><p>Five ways people show up for each other. Noodle notices which ones your reach-outs lean toward, so you can see your strengths, plus one gentle idea for room to grow. It's a mirror, not a score.</p></details>
+    <details><summary>Can I keep notes about myself?</summary><p>Yes. You have your own card for the things about you, like goals and what you're up to.</p></details>
+    <details><summary>Can I fix something Noodle got wrong?</summary><p>Yes. Open the person or note, tap Edit, and change or delete it.</p></details>
+  </div>
+
+  <h3 class="faq-group">Privacy and AI</h3>
+  <div class="faq">
+    <details><summary>Who can see my notes?</summary><p>Only you. Your notes are encrypted, used only to run Noodle, never sold and never used for ads.</p></details>
+    <details><summary>How does Noodle use AI?</summary><p>To sort what you say onto the right person, write summaries and daily ideas, and answer questions you ask about your people. Note content goes to Anthropic, our AI provider, only when you use those features, and Anthropic doesn't train its models on it.</p></details>
+    <details><summary>Does Noodle read my contacts?</summary><p>No. If you link someone to a contact so you can text or call them from Noodle, you pick that one contact, and it stays on your phone. It's never sent to our servers.</p></details>
+    <details><summary>What happens to my voice?</summary><p>It's turned into text on your phone when your phone supports it, otherwise by Apple's or Google's speech service. Noodle never stores recordings, only the text.</p></details>
+    <details><summary>How do I delete my account?</summary><p>In the app, go to Profile, then Delete account, or follow the steps on the <a href="/delete-account/">delete account page</a>. Your data is deleted, generally within 30 days.</p></details>
+    <details><summary>Does Noodle track my location?</summary><p>No. Noodle doesn't collect location data.</p></details>
   </div>
   <p style="margin-top:28px">More answers on the <a href="/support/">support page</a>, or email <a href="mailto:support@noodleit.me">support@noodleit.me</a>.</p>
 </div>
@@ -158,8 +216,34 @@
 </main>
 
 <footer class="site-footer">
-  <nav><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/support/">Support</a><a href="/delete-account/">Delete account</a><a href="mailto:support@noodleit.me">support@noodleit.me</a></nav>
+  <nav><a href="/about/">About</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/support/">Support</a><a href="/delete-account/">Delete account</a><a href="mailto:support@noodleit.me">support@noodleit.me</a></nav>
   <p>&copy; 2026 Jessica Agarwal</p>
 </footer>
+<script>
+// Slowly rotate the example cards: slide one card left, then move it to the end.
+(function () {
+  var deck = document.getElementById("deck");
+  if (!deck || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var paused = false, busy = false;
+  var mock = deck.closest(".mock");
+  mock.addEventListener("mouseenter", function () { paused = true; });
+  mock.addEventListener("mouseleave", function () { paused = false; });
+  setInterval(function () {
+    if (paused || busy || document.hidden) return;
+    var first = deck.firstElementChild;
+    var step = first.getBoundingClientRect().width + parseFloat(getComputedStyle(deck).columnGap || 12);
+    busy = true;
+    deck.style.transition = "transform 1.1s cubic-bezier(.45,0,.2,1)";
+    deck.style.transform = "translateX(" + -step + "px)";
+    deck.addEventListener("transitionend", function done() {
+      deck.removeEventListener("transitionend", done);
+      deck.style.transition = "none";
+      deck.appendChild(first);
+      deck.style.transform = "none";
+      busy = false;
+    });
+  }, 4800);
+})();
+</script>
 </body>
 </html>
