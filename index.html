@@ -213,7 +213,7 @@
 <link rel="icon" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/Newsreader-Regular.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css?v=3">
 </head>
 <body class="home">
 
@@ -304,10 +304,7 @@
         </div>
       </div>
       </div>
-      <div class="deck-nav">
-        <div class="pips" id="pips"></div>
-        <button type="button" class="next" id="next" aria-label="Next example"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-      </div>
+      <div class="pips" id="pips"></div>
     </div>
   </section>
 </div>
@@ -430,9 +427,9 @@
   <p>&copy; 2026 Jessica Agarwal</p>
 </footer>
 <script>
-// Example cards: rotate slowly, and let people step through with the arrow, the dots, or a swipe.
+// Example cards: rotate slowly, and let people step through with the dots or a swipe.
 (function () {
-  var deck = document.getElementById("deck"), pipsEl = document.getElementById("pips"), next = document.getElementById("next");
+  var deck = document.getElementById("deck"), pipsEl = document.getElementById("pips");
   if (!deck) return;
   var cards = Array.prototype.slice.call(deck.children), n = cards.length, at = 0, busy = false, paused = false, lastMove = 0;
   cards.forEach(function (c, i) { c.dataset.i = i; });
@@ -464,7 +461,6 @@
     };
     if (slow === "0s") finish(); else setTimeout(finish, parseFloat(slow) * 1000 + 30);
   }
-  next.addEventListener("click", function () { go(1); });
   var mock = deck.closest(".mock"), x0 = null;
   mock.addEventListener("mouseenter", function () { paused = true; });
   mock.addEventListener("mouseleave", function () { paused = false; });
