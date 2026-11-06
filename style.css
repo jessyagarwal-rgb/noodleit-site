@@ -88,12 +88,18 @@ th{background:var(--card)}
 .c .acts .send{background:var(--navy);color:var(--ground)}
 .c .acts .ic{background:none;padding:4px;display:grid}
 .c .acts .ic svg{width:17px;height:17px;opacity:.7}
-/* Home's MicBlob: the noodle blob tinted navy + the hand-drawn mic + pencil (src/components/MicBlob.tsx) */
-.mic{position:relative;display:flex;justify-content:center;margin-top:18px}
-.mic .blob{position:relative;width:88px;height:84px;display:grid;place-items:center}
-.mic .blob i{position:absolute;inset:0;background:var(--navy);
-  -webkit-mask:url(/img/blob.png) center/contain no-repeat;mask:url(/img/blob.png) center/contain no-repeat}
-.mic .blob img{position:relative;width:29px;height:auto}
+/* Carousel controls: one dot per example + a next arrow */
+.c.link img.av{width:46px;height:46px;margin:0;border-radius:50%;object-fit:cover}
+.deck-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:18px}
+.pips{display:flex;gap:2px}
+.pips button{width:20px;height:20px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.pips button::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--line);transition:background .3s,transform .3s}
+.pips button[aria-current="true"]::before{background:var(--navy);transform:scale(1.15)}
+.next{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--navy);
+  display:grid;place-items:center;cursor:pointer;padding:0}
+.next:hover{background:var(--ground)}
+.next svg{width:16px;height:16px}
+.pips button:focus-visible,.next:focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:50%}
 
 .band{padding:80px 0;border-top:1px solid var(--line)}
 .band h2{font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.12;margin:0 0 16px;max-width:20em;text-wrap:balance}

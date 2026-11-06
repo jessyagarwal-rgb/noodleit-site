@@ -1,0 +1,17 @@
+# Noodle
+
+> Noodle is a relationship wingman app for iPhone and Android. You talk to it about the people in your life, it remembers the little things (birthdays, big moments, interests), and each day it hands you a few warm reasons to reach out. Made by Jessica Agarwal.
+
+- Free, no in-app purchases. Sign in with an email code.
+- Noodle suggests; you decide. It never messages anyone for you.
+- Notes are private, encrypted, never sold or used for ads. Voice recordings are never stored.
+- AI (Anthropic) sorts notes and writes suggestions; Anthropic doesn't train on the content.
+
+## Pages
+
+- [Home and FAQ](https://noodleit.me/): what Noodle does, how it works, and common questions
+- [About](https://noodleit.me/about/): why Jessica built Noodle
+- [Support](https://noodleit.me/support/): help and contact (support@noodleit.me)
+- [Privacy policy](https://noodleit.me/privacy/)
+- [Terms of use](https://noodleit.me/terms/)
+- [Delete account](https://noodleit.me/delete-account/)

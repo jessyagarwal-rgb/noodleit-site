@@ -5,7 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <title>About · Noodle</title>
-<meta name="description" content="Why I built Noodle: I've always been curious about people.">
+<meta name="description" content="Why Jessica Agarwal built Noodle, an app that helps you remember what matters about your people and stay close to them.">
+<link rel="canonical" href="https://noodleit.me/about/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Noodle">
+<meta property="og:url" content="https://noodleit.me/about/">
+<meta property="og:title" content="About · Noodle">
+<meta property="og:description" content="Why Jessica Agarwal built Noodle, an app that helps you remember what matters about your people and stay close to them.">
+<meta property="og:image" content="https://noodleit.me/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://noodleit.me/img/og.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "AboutPage",
+ "url": "https://noodleit.me/about/",
+ "mainEntity": {
+  "@type": "Person",
+  "@id": "https://noodleit.me/about/#jessica",
+  "name": "Jessica Agarwal",
+  "jobTitle": "Founder",
+  "worksFor": {
+   "@type": "Organization",
+   "name": "Noodle",
+   "url": "https://noodleit.me/"
+  },
+  "image": "https://noodleit.me/img/jessica.jpg",
+  "sameAs": [
+   "https://www.linkedin.com/in/jessicaagarwal1/",
+   "https://www.instagram.com/99centpoptart/"
+  ]
+ }
+}
+</script>
 <link rel="icon" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/style.css">
@@ -46,7 +80,7 @@
 <div class="wrap prose story">
   <p>When I was little, I mowed lawns for the seniors in town. I liked the mowing fine, but the best part came after, sitting with them over a glass of water (and often a cookie). They'd tell me about their lives, their interests, their kids. Those conversations meant something to both of us.</p>
   <p>I still think about that. My husband and I have a running game when we walk down the street: how many people can we get to say hello? Where we live, it's less than half. It sounds small, but it stays with me. We're all moving through the same world, carrying stories and ideas we could share, and it's easier to keep our heads down and walk right past each other.</p>
-  <p>The people around us shape our lives. They open doors, teach us things we didn't know, and remind us we're not doing this alone. But connection takes intention. We're busy. Networking can feel awkward. And most of us aren't great at remembering the little things someone tells us, even though those details are often what help a relationship grow.</p>
+  <p>The people around us shape our lives. They open doors, teach us things we didn't know, and remind us we're not doing this alone. But connection takes intention. We're busy. Relationships take time to build. And most of us aren't great at remembering the little things someone tells us, even though those details are often what help a relationship grow.</p>
   <p>Noodle is my attempt to make that easier. To help us show up for each other, learn from each other, and keep the connections that matter alive. And maybe find a few more people who change our lives.</p>
   <img class="signature" src="/img/signature.png" alt="Jess" width="640" height="441">
 
@@ -65,7 +99,7 @@
       <div class="person">
         <span class="ph" style="background:var(--mint)"><b>S</b><img src="/img/people/shannyn.jpg" alt="Shannyn Timrott" onerror="this.remove()"></span>
         <h3>Shannyn Timrott</h3>
-        <p>My soul sister, product master, and user-centric, full-hearted friend.</p>
+        <p>My strategic thought partner, product master and user-centric full-hearted friend.</p>
         <a class="li" href="https://www.linkedin.com/in/stimrott/" target="_blank" rel="noopener" aria-label="Shannyn Timrott on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-1 1.83-1.8 3.77-1.8 4.03 0 4.37 2.4 4.37 5.5v5.8h-4v-5.1c0-1.3-.02-2.95-1.8-2.95-1.8 0-2.2 1.4-2.2 2.85v5.2h-4v-11Z"/></svg>LinkedIn</a>
       </div>
       <div class="person">
@@ -98,8 +132,7 @@
       <h2>Help take Noodle to the next level.</h2>
       <p>Right now Noodle is a team of one. I'm raising a seed round and would love to talk with investors and partners who care about helping people stay connected.</p>
     </div>
-    <a class="store mailme" href="#" data-u="jessica" data-d="noodleit.me">Email Jessica</a>
-    <noscript><p>jessica at noodleit dot me</p></noscript>
+    <a class="store mailme" href="#" rel="nofollow" data-m="ZW0udGllbGRvb25Ac3Nlag==">Email Jessica</a>
   </div>
 </div>
 </section>
@@ -111,8 +144,9 @@
 </footer>
 <script>
 // Build the address only when someone goes to use it, so it never sits in the page for scrapers.
+// The address is stored reversed and base64-encoded, so it never appears as plain text.
 document.querySelectorAll(".mailme").forEach(function (a) {
-  function arm() { a.href = "mai" + "lto:" + a.dataset.u + "\u0040" + a.dataset.d + "?subject=Noodle"; }
+  function arm() { a.href = "mai" + "lto:" + atob(a.dataset.m).split("").reverse().join("") + "?subject=Noodle"; }
   ["mouseenter", "focus", "touchstart", "click"].forEach(function (e) { a.addEventListener(e, arm, { passive: true }); });
 });
 </script>
